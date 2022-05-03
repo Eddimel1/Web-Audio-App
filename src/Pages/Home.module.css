@@ -1,0 +1,7 @@
+.someclass{
+    background-color: red;
+}
+.customSvg{
+    width: 250px;
+    fill:  hsl(248, 53%, 58%)
+}
