@@ -1,4 +1,6 @@
 import classes from './Home.module.css'
+import React from 'react'
+
 
 export const Home = () => {
   
