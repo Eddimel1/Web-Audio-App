@@ -1,4 +1,4 @@
-import classes from './page2.module.css'
+import classes from './Home.module.css'
 
 export const Home = () => {
   
