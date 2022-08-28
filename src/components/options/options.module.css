@@ -1,0 +1,85 @@
+.innerOptionsWrapper {
+  font-family: monospace;
+  font-size: clamp(10px, 0.8vw, 18px);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: 2rem;
+  transition: all 1.5s cubic-bezier(0.47, 0, 0.745, 0.715);
+  animation: onAppear 1.5s cubic-bezier(0.47, 0, 0.745, 0.715);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1.5rem;
+}
+.optionsContainer {
+  display: flex;
+  width: 100%;
+  margin-top: 4rem;
+}
+.optionsToggler {
+  box-shadow: 3px 3px 6px 4px rgb(0 0 0 / 50%);
+  font-family: monospace;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  z-index: 500;
+  position: absolute;
+  top: 0.01%;
+  right: 0;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: white;
+  width: clamp(250px, 3vw, 300px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.option {
+  width: 100%;
+  border-bottom: black solid 1px;
+}
+
+.optionName {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  cursor: pointer;
+  padding: 0.3rem 1.5rem;
+}
+.filtersWrapper {
+  flex: 5;
+}
+.mainOptionsWrapper {
+  flex: 1.5;
+  position: relative;
+  z-index: 500;
+}
+.slideIn {
+  animation: onAppear 0.7s ease;
+  animation-fill-mode: forwards;
+}
+.slideOut {
+  animation: onDissapear 0.7s ease;
+  animation-fill-mode: forwards;
+}
+.optionsToggler:hover {
+  transform: translateX(2px);
+}
+
+@keyframes onAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes onDissapear {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

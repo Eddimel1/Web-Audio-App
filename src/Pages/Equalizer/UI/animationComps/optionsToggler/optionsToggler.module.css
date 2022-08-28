@@ -1,0 +1,47 @@
+.showHideToggler {
+  width: 50px;
+  height: 25px;
+  position: absolute;
+  left: calc(50%);
+  transform: translateX(calc(-50% + 2px));
+  border: 2px solid rgb(14, 10, 4);
+  border-top: none;
+  cursor: pointer;
+  transition: border 0.2s ease-in;
+  background: linear-gradient(
+    90deg,
+    rgb(233, 157, 127) 0%,
+    rgba(218, 166, 33, 1) 51%,
+    rgb(255, 208, 1) 100%
+  );
+}
+.showHideToggler:hover {
+  border: 2px solid orange;
+  border-top: none;
+}
+.animateOut {
+  display: inline-block;
+  transition: 2s;
+  animation: animateOut 1s ease-in-out forwards;
+}
+.animateIn {
+  display: inline-block;
+  transition: 2s;
+  animation: animateIn 1s ease-in-out forwards;
+}
+@keyframes animateIn {
+  0% {
+    transform: translateY(-95%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes animateOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-95%);
+  }
+}

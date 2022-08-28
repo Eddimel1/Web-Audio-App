@@ -1,0 +1,36 @@
+.filterName {
+  user-select: none;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.optionsGrid {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  margin-bottom: 2rem;
+}
+.filterOptionsContainer {
+  position: relative;
+  z-index: 500;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 2rem;
+}
+.nameAndSwitcherContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.optionInputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 8rem;
+}
+@media (max-width: 1000px) {
+  .filterOptionsContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}

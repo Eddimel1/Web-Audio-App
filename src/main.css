@@ -1,3 +1,94 @@
 body {
-  background-color: palegreen;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+input[type='range'] {
+  width: 100%;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type='range']:focus {
+  outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.9);
+  border: 0.2px solid #dcdcdc;
+  border-radius: 6.9px;
+  width: 100%;
+  height: clamp(10px, 1.5vw, 18.1px);
+  cursor: pointer;
+}
+input[type='range']::-webkit-slider-thumb {
+  margin-top: -8.15px;
+  width: clamp(15px, 2vw, 27px);
+  height: clamp(15px, 5vw, 34px);
+  background: #ffffff;
+  border: 3.8px solid #dcdcdc;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
+input[type='range']::-moz-range-track {
+  background: rgba(255, 255, 255, 0.9);
+  border: 0.2px solid #dcdcdc;
+  border-radius: 6.9px;
+  width: 100%;
+  height: 18.1px;
+  cursor: pointer;
+}
+input[type='range']::-moz-range-thumb {
+  width: clamp(18px, 4vw, 27px);
+  height: clamp(20px, 3vw, 34px);
+  background: #ffffff;
+  border: 3.8px solid #dcdcdc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+input[type='range']::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 17.45px 0;
+  color: transparent;
+  width: 10px;
+  height: 18.1px;
+  cursor: pointer;
+}
+input[type='range']::-ms-fill-lower {
+  background: #cccccc;
+  border: 0.2px solid #dcdcdc;
+  border-radius: 13.8px;
+}
+input[type='range']::-ms-fill-upper {
+  background: rgba(255, 255, 255, 0.9);
+  border: 0.2px solid #dcdcdc;
+  border-radius: 13.8px;
+}
+input[type='range']::-ms-thumb {
+  width: clamp(18px, 4vw, 27px);
+  height: clamp(20px, 3vw, 34px);
+  background: #ffffff;
+  border: 3.8px solid #dcdcdc;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0px;
+}
+input[type='range']:focus::-ms-fill-lower {
+  background: rgba(255, 255, 255, 0.9);
+}
+input[type='range']:focus::-ms-fill-upper {
+  background: #ffffff;
+}
+
+@supports (-ms-ime-align: auto) {
+  input[type='range'] {
+    margin: 0;
+  }
 }

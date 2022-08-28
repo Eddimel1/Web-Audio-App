@@ -1,0 +1,35 @@
+.optionContainer {
+  width: 100%;
+  max-height: 2rem;
+  margin-top: clamp(1rem, 5vw, 2rem);
+  display: flex;
+  grid-column: 1 / 4;
+  align-items: center;
+  justify-content: space-between;
+}
+.dropDownWrapper {
+  margin-top: 10rem;
+  margin-left: 12.5rem;
+  width: clamp(15rem, 5vw, 25rem);
+  display: flex;
+  flex-direction: column;
+}
+.numberInput {
+  color: rgb(37, 18, 1);
+  max-width: 3rem;
+  max-height: 1rem;
+  font-size: clamp(10px, 5vw, 14px);
+  font-weight: 700;
+}
+.optionName {
+  font-family: Garamond, serif;
+  font-weight: 700;
+  font-size: clamp(10px, 5vw, 18px);
+  text-shadow: 0px 0px 5px orange;
+}
+.numberInput:hover {
+  border: 2px solid rgb(212, 120, 33);
+}
+input:focus {
+  background-color: rgb(233, 170, 75);
+}

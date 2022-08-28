@@ -1,0 +1,130 @@
+.canvasWrapper {
+  overflow: hidden;
+  z-index: -999999;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  position: absolute;
+  left: 0;
+}
+.globalOptionsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: clamp(0.5rem, 5vw, 2rem);
+  column-gap: clamp(0.5rem, 1vw, 2rem);
+}
+.canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+.labelForInput {
+  max-width: 30rem;
+  z-index: 10;
+  color: #533e00;
+}
+.globalSideBarWrapper {
+  display: inline-block;
+  position: relative;
+  width: max(24.7vw, 350px);
+  height: 100%;
+  border: 3px solid black;
+  animation: onAppear 1s ease-in-out;
+  filter: blur(0.5px);
+  background: linear-gradient(
+    90deg,
+    rgba(240, 240, 240, 1) 0%,
+    rgba(252, 226, 226, 1) 62%,
+    rgba(241, 251, 251, 1) 100%
+  );
+}
+.labelForInput input {
+  visibility: hidden;
+  width: 100%;
+}
+.globalSideBarContainer {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(0.5rem 1vw 2rem);
+}
+.labelForInput:before {
+  content: 'Choose File';
+  width: 100%;
+  display: inline-block;
+  background: -webkit-linear-gradient(-180deg, #ffdc73, #febf01);
+  background: -o-linear-gradient(-180deg, #ffdc73, #febf01);
+  background: -moz-linear-gradient(-180deg, #ffdc73, #febf01);
+  background: linear-gradient(-180deg, #ffdc73, #febf01);
+  border: 3px solid #dca602;
+  border-radius: 10px;
+  padding: 5px 0px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.8rem;
+
+  transition: all 1s ease-in-out;
+}
+
+.labelForInput:hover:before {
+  border: 3px solid #f38508;
+  border-radius: 15px;
+  color: rgb(134, 66, 10);
+  transform: scaleX(1.05);
+  text-shadow: 1px 1px rgba(216, 160, 6, 0.7);
+}
+
+.togglerContainer {
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+.optionsBarWrapper {
+  transition: all 2s;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.showHideToggler {
+  width: 50px;
+  height: 25px;
+  position: absolute;
+  bottom: -4%;
+  left: 50%;
+  background-color: black;
+}
+
+@keyframes animateIn {
+  0% {
+    transform: translateY(-95%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes animateOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-95%);
+  }
+}
+
+@keyframes onAppear {
+  0% {
+    filter: hue-rotate(360deg);
+    opacity: 0;
+  }
+
+  100% {
+    filter: hue-rotate(0deg);
+    opacity: 1;
+  }
+}

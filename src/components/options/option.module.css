@@ -1,0 +1,56 @@
+.boxOptionContainer {
+  display: flex;
+  width: 100%;
+  border: rgba(20, 20, 20, 0.6) solid 2px;
+  border-radius: 10px;
+  margin: 2rem 0rem;
+}
+.boxOptionContaier + .defaultInputContainer {
+  margin-top: 2rem;
+}
+.boxValuesContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.defaultInputContainer {
+  width: max(130, 100%);
+}
+.boxOptionName,
+.optionName,
+.filterParamName {
+  user-select: none;
+}
+.boxValue {
+  padding: 0 0.1rem;
+  font-size: clamp(12px, 3vw, 15px);
+  font-weight: 700;
+}
+.option {
+  width: 100%;
+  border-bottom: black solid 1px;
+}
+.boxOptionName {
+  text-align: center;
+  padding-top: 4%;
+  padding-left: 0.7rem;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+}
+.input {
+  width: 100%;
+  margin: 7.95px 0;
+}
+.boxInput {
+  width: 100%;
+  margin: 7.95px 0;
+}
+
+.defaultInput {
+  width: 100%;
+  margin: 7.95px 0;
+}
+
+@media (max-width: 700px) {
+  .boxOptionContainer {
+    flex-wrap: wrap;
+  }
+}

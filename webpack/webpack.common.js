@@ -16,7 +16,7 @@ module.exports = {
     output: {
         path: path.join(__dirname,'/dist'),
         filename: "bundle.js",
-        assetModuleFilename : 'images/[hash][ext][query]'
+         assetModuleFilename : '[name][ext]'
     },
     plugins : [
         new CleanWebpackPlugin(),
@@ -31,9 +31,14 @@ module.exports = {
     ],
     resolve: {
         extensions: ['.tsx', '.ts', '.js' ,'.jsx' ,'css' ,'module.css'],
-        fallback: {process:require.resolve('process')}
+        fallback: {process:require.resolve('process')},
+        alias: {
+            three: path.resolve('./node_modules/three'),
+            images : 'C:/Users/i_los/OneDrive/Рабочий стол/projects/Typescript/Web-Audio-App/assets'
+        }
       },
     module:{
+        
        
  rules:[{
     test: /.(js|jsx|ts|tsx)$/,
@@ -57,16 +62,24 @@ module.exports = {
     use:[MiniCssExtractPlugin.loader, {
         loader:'css-loader',
         options:{
-
             importLoaders: 1,
             modules: true,
+            modules: {
+                localIdentName: '[local]_[hash:base64:5]'
+              }
         }
     }, 
     "postcss-loader",
             
 ]
-},{
-    test: /\.(png|jpe?g|gif|svg)$/i,
+},
+{
+        test: /\.glsl$/,
+        use : [{loader :'webpack-glsl-loader'}]
+    },
+
+{
+    test: /\.(png|jpe?g|gif|svg|gltf|bin|mp3|wav)$/i,
     type: 'asset/resource'
 },{
     test: /\.(woff(2)?|eot|ttf|otf|svg)$/i,
@@ -79,13 +92,17 @@ module.exports = {
         port: 9000,
         hot:true,
         open:true,
+        historyApiFallback: true,
         static: {
-            directory: path.join(__dirname, 'public'),
+             directory: path.join(__dirname, '../assets'),
+            
+            
+            
           },
           client: {
             overlay: {
               errors: true,
-              warnings: false,
+              warnings: true,
             }
           },
     },

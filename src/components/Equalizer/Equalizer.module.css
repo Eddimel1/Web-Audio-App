@@ -1,0 +1,7 @@
+.canvasElem {
+  margin-left: calc(50% - 15vw);
+  width: clamp(10rem, 20vw, 25rem);
+  height: clamp(4rem, 7vw, 8rem);
+  border: 3px solid rgb(9, 78, 38);
+  background-color: rgba(2, 29, 13, 0.267);
+}

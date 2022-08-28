@@ -1,0 +1,50 @@
+.sideBarWrapper {
+  max-width: 25rem;
+  border: 3px solid black;
+  transition: all 0.3s ease;
+  animation: onAppear 1s ease-in-out;
+  filter: blur(0.5px);
+  background: linear-gradient(
+    90deg,
+    rgba(240, 240, 240, 1) 0%,
+    rgba(252, 226, 226, 1) 62%,
+    rgba(241, 251, 251, 1) 100%
+  );
+}
+.sideBarContainer {
+  display: grid;
+  row-gap: clamp(0.5rem, 1.5vw, 1.3rem);
+  column-gap: clamp(1rem, 1.5vw, 2rem);
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: clamp(0.5rem, 1.5vw, 2rem);
+}
+
+.transition {
+  position: absolute;
+  z-index: 99999999;
+  width: 150vw;
+  height: 100vw;
+  top: 0;
+  left: 0;
+  background-color: violet;
+  animation: transition 1s ease-in-out forwards;
+}
+
+@keyframes transition {
+  0% {
+    transform: translateX(-50vw);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes onAppear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
