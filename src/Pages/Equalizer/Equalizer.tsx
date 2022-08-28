@@ -351,14 +351,14 @@ export const Equalizer = () => {
 
         audioCtxRef.current.resume()
         audioRef.current.load()
-        audioRef.current.play()
+        audioRef.current.play().catch((e) => console.log(e))
       }
     }
   }
 
   return (
     <>
-      <OptionsToggler styles={{ bottom: '-3.5%' }}>
+      <OptionsToggler>
         <div className={`${classes.globalSideBarWrapper}`}>
           <EqualizerTransition></EqualizerTransition>
           <div className={classes.globalSideBarContainer}>
