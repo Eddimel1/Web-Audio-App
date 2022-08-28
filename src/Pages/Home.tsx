@@ -13,7 +13,7 @@ import vertex from '../components/shaders/planeVertex.glsl'
 import fragment from '../components/shaders/planeFragment.glsl'
 import sphereVertex from '../components/shaders/sphereVertex.glsl'
 import sphereFragment from '../components/shaders/sphereFragment.glsl'
-import { NavBar } from './Equalizer/UI/navBar/navBar'
+import { NavBar } from '../components/navBar/navBar'
 
 export const Home = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)

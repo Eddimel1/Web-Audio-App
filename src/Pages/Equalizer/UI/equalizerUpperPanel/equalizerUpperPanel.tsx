@@ -1,7 +1,7 @@
 import { globalModes } from 'Pages/Equalizer/drawFunctions/types'
 import { equalizerT } from 'Pages/Equalizer/types/configTypes'
 import React, { useState } from 'react'
-import { NavBar } from '../navBar/navBar'
+import { NavBar } from '../../../../components/navBar/navBar'
 import classes from './equalizerUpperPanel.module.css'
 type propT = {
   fullscreenRef: React.RefObject<HTMLDivElement>

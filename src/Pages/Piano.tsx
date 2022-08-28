@@ -15,7 +15,7 @@ import {
   createCtx,
   useCtx,
 } from '../contexts/PianoContext'
-import { NavBar } from './Equalizer/UI/navBar/navBar'
+import { NavBar } from '../components/navBar/navBar'
 import { EqualizerTransition } from './Equalizer/UI/animationComps/equalizerTransition/equalizerTransition'
 export const context = createCtx<pianoContextType>()
 export const Piano = () => {
