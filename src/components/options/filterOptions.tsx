@@ -11,7 +11,6 @@ export const FilterOptions = (props: {
 }) => {
   const [arrayOfActiveOptions, addToArrayOfActiveOptions] =
     useState<filterOptionsArrayType>(['allpass'])
-  console.log(arrayOfActiveOptions)
 
   const checkIfChecked = (value: filterType) => {
     if (arrayOfActiveOptions.includes(value)) {
@@ -21,7 +20,6 @@ export const FilterOptions = (props: {
   }
   useEffect(() => {
     if (props.osc && props.osc.current) {
-      console.log(arrayOfActiveOptions)
       props.osc.current.createAndConnectFilters(arrayOfActiveOptions)
     }
   }, [addToArrayOfActiveOptions, arrayOfActiveOptions])
@@ -41,10 +39,8 @@ export const FilterOptions = (props: {
             const activeFilter = osc.current.activeFilters[index]
 
             if (activeFilter && props.ctx.current) {
-              console.log(osc.current.activeFilters)
               activeFilter[valueType].value = valNumber
-              console.log(activeFilter[valueType])
-              console.log(valNumber)
+              
             }
           }
         }

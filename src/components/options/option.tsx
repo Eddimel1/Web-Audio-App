@@ -62,12 +62,12 @@ export const Option: React.FC<propType> = (props: propType) => {
   const inlineChanger = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInlineValue(e.target.value)
   }
+
   const envelopeHandler = (
     e: React.ChangeEvent<HTMLInputElement>,
     type: envelopeTypeName | undefined
   ) => {
     if (envelopeRef && envelopeRef.current) {
-      console.log(envelopeRef.current)
       switch (type) {
         case 'attack':
           envelopeRef.current.attack = Number(e.target.value)
@@ -90,7 +90,6 @@ export const Option: React.FC<propType> = (props: propType) => {
   type === 'box' &&
     useEffect(() => {
       if (osc.current) {
-        console.log(osc.current.osc.type)
         osc.current.osc.type = wave
       }
     }, [wave, setCurrentWave, boxValue])

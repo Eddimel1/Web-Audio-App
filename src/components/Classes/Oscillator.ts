@@ -54,36 +54,34 @@ export class Oscillator {
     arrayofFilters.forEach((filter, i, array) => {
       let filterCount = array.length
       if (i === 0) {
-        console.log('1', prevFilter)
         const curFilter = new Filter(this.ctx, filter, this.mainGainNode)
         this.activeFilters = [curFilter]
         prevFilter = curFilter
         filterCount === 1 && curFilter.connect(this.ctx.destination)
 
-        console.log(this.activeFilters)
       } else if (i === 1) {
-        console.log('2', prevFilter)
+       
         const curFilter = new Filter(this.ctx, filter, prevFilter)
         this.activeFilters.push(curFilter)
-        console.log(prevFilter)
+      
         prevFilter = curFilter
         filterCount === 2 && curFilter.connect(this.ctx.destination)
-        console.log(this.activeFilters)
+     
       } else if (i === 2 || (i > 1 && i != array.length - 1)) {
-        console.log('3', prevFilter)
+    
         const curFilter = new Filter(this.ctx, filter, prevFilter)
 
         prevFilter = curFilter
         this.activeFilters.push(curFilter)
-        console.log(this.activeFilters)
+      
         filterCount === 3 && curFilter.connect(this.ctx.destination)
       } else if (i !== 0 && i === array.length - 1) {
-        console.log('4', prevFilter)
+       
         const curFilter = new Filter(this.ctx, filter, prevFilter)
         this.activeFilters.push(curFilter)
         prevFilter = curFilter
         curFilter.connect(this.ctx.destination)
-        console.log(this.activeFilters)
+      
         filterCount >= 4 && curFilter.connect(this.ctx.destination)
       }
     })

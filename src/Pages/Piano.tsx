@@ -41,6 +41,7 @@ export const Piano = () => {
         antialias: true,
       })
     }
+    
     const vertices = []
     for (let i = 0; i < 10000; i++) {
       const x = THREE.MathUtils.randFloatSpread(3000)
@@ -69,7 +70,6 @@ export const Piano = () => {
     const keyGroup = new KeyGroup({ x: -150, y: -57, z: -75 })
     keyGroup.keyGroup.name = 'piano'
 
-    console.log(keyGroup)
     if (sceneIniter) {
       sceneIniterRef.current = sceneIniter
     }

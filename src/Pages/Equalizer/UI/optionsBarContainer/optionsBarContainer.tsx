@@ -17,7 +17,6 @@ export const OptionsBarContainer = ({
   const randomColor = useRef<string>()
   const intervalId = useRef<NodeJS.Timer>()
   let colorChanged = false
-  console.log(animEnded)
   function randomNumberInveral(min: number, max: number) {
     return Math.random() * (max - min) + min
   }

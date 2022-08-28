@@ -53,7 +53,6 @@ export class KeyGroup {
       )
       this.keyGroup.add(meshBlackKey.mesh)
       this.boxMeshArray.push(meshBlackKey)
-      console.log(this.boxMeshArray)
     })
   }
   //@ts-ignore

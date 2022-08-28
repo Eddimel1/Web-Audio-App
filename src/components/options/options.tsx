@@ -60,7 +60,6 @@ export const Options = (props: {
   ) => {
     const freq = keyGroup.current && keyGroup.current.getFreqbyIndex(e.key)
     const enve = envelopeRef.current
-    console.log(enve)
     if (osc.current && freq && ctx.current) {
       osc.current.osc.frequency.setValueAtTime(freq, ctx.current.currentTime)
       osc.current.changeFilterValues(100, 5)
