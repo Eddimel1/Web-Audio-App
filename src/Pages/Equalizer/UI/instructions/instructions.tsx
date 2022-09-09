@@ -16,7 +16,7 @@ export const Instructions = () => {
                     Equalizers will behave differently and will have different sensitivity depending on that option.
                     </div>
                     <div className={classes.textField}>
-                    To have best experience , please choose option from the picture on the right.
+                    To have best experience , please choose option from the picture on the left.
                     </div>
                     <div className={classes.textField}>
                     Please be carefull when using globalCompositeOperation and shadows.Currently they are not optimized.
