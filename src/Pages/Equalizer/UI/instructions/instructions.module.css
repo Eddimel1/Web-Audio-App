@@ -1,0 +1,72 @@
+.instructionButton{
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+.instructionButton:hover{
+    transition: all 0.4s ease-in-out;
+    filter: invert(0.2);
+    mix-blend-mode: luminosity;
+    cursor: pointer;
+    transform: translateX(-1px);
+    box-shadow: 0px 0px 10px orange;
+   
+}
+.instructions img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.instructionContainer{
+    width: max-content;
+    max-width: 900px;
+    min-height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: calc(120% - 1vw);
+    border: 2px solid black;
+}
+.instructions{
+    
+display: flex;
+width: 100%;
+height: 100%;
+}
+.show{
+animation: displayOn 1s ease-in-out forwards;
+}
+.hide{
+animation: displayOff 1s ease-in-out forwards;
+}
+.instructionText{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: clamp(18px ,2vw ,25px);
+}
+
+@keyframes displayOn {
+    0%{
+        transform: translateY(300%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes displayOff {
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(300%);
+        display: none;
+    }
+}
+@media (max-width:1300px){
+    .instructionContainer{
+        width: 75%;
+        max-width: 700px;
+    }
+}

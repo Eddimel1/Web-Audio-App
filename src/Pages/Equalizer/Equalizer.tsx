@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import classes from './Equalizer.module.css'
 import { Analyzer } from '../../components/Classes/Analyzer'
 import { configType, equalizerT, globalSettings } from './types/configTypes'
@@ -21,6 +21,7 @@ import { OptionsToggler } from './UI/animationComps/optionsToggler/optionsToggle
 import { EqualizerUpperPanel } from './UI/equalizerUpperPanel/equalizerUpperPanel'
 import { globalModes } from './drawFunctions/types'
 import { throttle } from './drawFunctions/drawingUtils'
+import { Instructions } from './UI/instructions/instructions'
 
 const globalConfigInit: globalSettings = {
   kind: 'global',
@@ -375,8 +376,11 @@ export const Equalizer = () => {
                 config={globalConfig}
               ></GlobalOptions>
             </OptionsBarContainer>
-
+            <div style={{display:'flex' , justifyContent:'space-between' , alignItems:'center'}}>
             <audio controls ref={audioRef} style={{ height: '70px' }}></audio>
+            <Instructions></Instructions>
+            </div>
+           
           </div>
         </div>
       </OptionsToggler>

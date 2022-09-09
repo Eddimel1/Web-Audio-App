@@ -178,9 +178,6 @@ const drawWithImageCb: drawingCbType = (
   const bitCopy = arr[i]
   if (mode) executeMode(mode, i, bit1, volume1, time)
   ctx.save()
-
-  //  if(mode) executeMode(mode,i,bit1,Math.random()*volume1*10,time)
-
   ctx.strokeStyle = `rgba(${(Math.random() * 255) / bit},${
     (Math.random() * 255) / bit / 40
   },${(Math.random() * 255) / bit / 100},${bit / 20})`
@@ -323,7 +320,7 @@ const drawWithImageCb: drawingCbType = (
     if (conf.mode === 'mode2') {
       ctx.globalAlpha = Math.sin(bit)
       if (i % 25 === 0) {
-        ctx.globalCompositeOperation = 'hard-light'
+        ctx.globalCompositeOperation = 'difference'
       }
       if (i % 50 === 0) {
         ctx.globalCompositeOperation = 'xor'
@@ -338,6 +335,7 @@ const drawWithImageCb: drawingCbType = (
       if (i % 125 === 0) {
         ctx.globalCompositeOperation = 'hard-light'
       }
+    
     }
     if (conf.mode === 'mode3') {
       ctx.globalAlpha = Math.sin(bit)

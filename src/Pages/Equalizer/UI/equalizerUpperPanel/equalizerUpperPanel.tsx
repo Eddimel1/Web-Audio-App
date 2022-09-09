@@ -92,7 +92,9 @@ export const EqualizerUpperPanel = ({
               >
                 {'<'}
               </i>
+             
             </button>
+          
             {isShownMode && (
               <div className={classes.modeDropDown}>
                 {modes.map((mode, i) => {

@@ -8,6 +8,7 @@ import {
 import { Slider } from '../UI/slider/slider'
 import { DropDownConductor } from '../UI/dropDown/dropDownConductor'
 
+// to extend amount of configs generics should be used instead of a union
 type propType<T, K> = {
   type: 'select' | 'number' | 'color'
   option: globalConfigKeyT // multiple options

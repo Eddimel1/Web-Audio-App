@@ -290,13 +290,7 @@ const drawWithSvgCb: drawingCbType = (
     canvasHeight / 2 - 100 + heartOffSetForFullScreen
   )
   ctx.rotate(-Math.PI / 8)
-  // if(i > 10){
-  //     if(i % 2 ===0 ) ctx.rotate(-bit/1200)
-  //     else{
-  //         ctx.rotate(bit/1200)
-  //     }
-  // }
-
+ 
   if (conf.mode === 'mode2') {
     ctx.rotate(
       i * 0.01 + conf.rotate + 0.2 + Math.cos(time / 800) * 10 + bit / 35
@@ -438,12 +432,9 @@ const drawWithSvgCb: drawingCbType = (
       const random = Math.random() * 200 + 10
       const random1 = Math.random() * 50
       const random2 = Math.random() * 20
-      // svgRefs[i].style.strokeDasharray = '5000'
-      // svgRefs[i].style.strokeDashoffset = '0'
+     
       if (i === 0) {
-        // refs[0].style.transform = `translateX(${random}px)`
-        // refs[0].style.transform = `translateY(${random}px)`
-        // refs[0].style.transform = `rotate(${random1}deg)`
+    
         if (time % 20000 === 0) {
           svgRefs[0].style.transform = `skew(${bit / 20}deg)`
         }

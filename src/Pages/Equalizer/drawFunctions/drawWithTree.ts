@@ -151,7 +151,6 @@ function drawTree(
   ctx.translate(startX + Math.sin(bit) - Math.sin(bit), startY)
 
   ctx.moveTo(0, 0)
-  // ctx.lineTo(0, -len);
   if (angle > 0) {
     ctx.bezierCurveTo(
       50 + bit / 2 + conf.branch1,

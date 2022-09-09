@@ -1,4 +1,3 @@
-import classes from './globalOptions.module.css'
 import React from 'react'
 import {
   globalConfigKeyT,
