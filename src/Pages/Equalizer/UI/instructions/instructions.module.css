@@ -22,7 +22,7 @@
     max-width: 900px;
     min-height: 300px;
     position: absolute;
-    bottom: 0;
+    bottom: -150px;
     left: calc(120% - 1vw);
     border: 2px solid black;
 }
@@ -50,17 +50,21 @@ animation: displayOff 1s ease-in-out forwards;
 
 @keyframes displayOn {
     0%{
+        
         transform: translateY(300%);
     }
     100%{
+       
         transform: translateY(0%);
     }
 }
 @keyframes displayOff {
     0%{
+     
         transform: translateY(0%);
     }
     100%{
+       
         transform: translateY(300%);
         display: none;
     }

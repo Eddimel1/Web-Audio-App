@@ -288,6 +288,7 @@ export const Equalizer = () => {
       }
     }
   }
+  
   const throttledResizeCb = throttle(resizeCb, 300)
   useEffect(() => {
     const analyzer = new Analyzer(audioCtxRef.current, 256)
